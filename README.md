@@ -7,7 +7,7 @@ Location: terraform/
 Commands:
 Open the Terraform Directory:
 ```bash
-cd terraform''
+cd terraform
 ```
 A)Initializes a terraform working directory:
 ```bash
