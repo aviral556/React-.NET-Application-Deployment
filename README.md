@@ -31,6 +31,7 @@ This will provision EKS cluster, IAM roles, and VPC.
 ## Step 2 :GitHub Webhook Setup to Trigger Jenkins Pipeline
 
 Configure Jenkins Job:
+
 1.Go to the Jenkins pipeline job.
 
 2.Check "GitHub project" and enter the GitHub repo URL.
