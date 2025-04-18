@@ -186,6 +186,8 @@ kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.26.1/
 Kubernetes with service selectors and label-based routing
 
 Files:
+
 k8s/deployments/backend-canary.yaml
 Use Service to route request to canary deployment.
-Explained in canary-deployment.md
+
+Please follow the steps in K8/canary-deployment.md
