@@ -73,15 +73,15 @@ Apply HPA:
 Check for metrics-server is installed :
 ```bash
 kubectl get deployment metrics-server -n kube-system
-```bash
+```
 If not installed:
 ```bash
 kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
-```bash
+```
 Now apply your HPA:
 ```bash
 kubectl apply -f k8s/hpa.yaml
-```bash
+```
 
 ## Steps 4: Monitoring and Logging Setup
 
