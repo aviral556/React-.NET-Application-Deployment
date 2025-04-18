@@ -17,7 +17,7 @@ B)Validate configuration files syntax:
 ```bash
 terraform --validate
 ```
-c)Check for resource creation
+C)Check for resource creation
 ```bash
 terraform plan 
 ```
@@ -30,7 +30,7 @@ This will provision EKS cluster, IAM roles, and VPC.
 
 ## Step 2 :GitHub Webhook Setup to Trigger Jenkins Pipeline
 
-A)Configure Jenkins Job:
+Configure Jenkins Job:
 1.Go to the Jenkins pipeline job.
 
 2.Check "GitHub project" and enter the GitHub repo URL.
@@ -140,7 +140,7 @@ Import dashboards for Kubernetes, nodes, and pods.
 
 3. Install Fluent Bit to forward logs to CloudWatch
 
-A)Add Fluent Bit Helm repo:
+Add Fluent Bit Helm repo:
 ```bash
 helm repo add fluent https://fluent.github.io/helm-charts
 helm repo update
@@ -175,5 +175,5 @@ kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.26.1/
 
 :Policy Objective
 
-- Block all incoming traffic to `backend` pods **by default**.
+- Block all incoming traffic to `backend` pods by default.
 - Only allow traffic from pods with label `app: frontend`.
