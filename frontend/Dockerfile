@@ -1,11 +1,9 @@
-# .NET Dockerfile
-FROM mcr.microsoft.comdotnetsdk7.0 AS build
-WORKDIR app
+# React Dockerfile
+FROM node:18 AS build
+WORKDIR /app
 COPY . .
-RUN dotnet restore
-RUN dotnet publish -c Release -o out
+RUN npm install && npm run build
 
-FROM mcr.microsoft.comdotnetaspnet7.0
-WORKDIR app
-COPY --from=build appout .
-ENTRYPOINT [dotnet, YourApp.dll]
+FROM nginx:alpine
+COPY --from=build /app/build /usr/share/nginx/html
+EXPOSE 80
