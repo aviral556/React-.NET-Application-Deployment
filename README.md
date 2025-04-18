@@ -117,8 +117,11 @@ Open in browser: http://localhost:9090
 
 2. Install Grafana using Helm
 
-Install Grafana via Helm in the same monitoring namespace:
+Add and Install Grafana via Helm in the same monitoring namespace:
 ```bash
+helm repo add grafana https://grafana.github.io/helm-charts
+helm repo update
+
 helm install grafana grafana/grafana \
   --namespace monitoring --monitoring \
   --set adminPassword='admin' \
