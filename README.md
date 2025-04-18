@@ -6,23 +6,29 @@ Location: terraform/
 
 Commands:
 Open the Terraform Directory:
-sh ''cd terraform''
-
+```bash
+cd terraform''
+```
 A)Initializes a terraform working directory:
-sh ''terraform init''
-
+```bash
+terraform init
+```
 B)Validate configuration files syntax:
-sh ''terraform --validate''
-
+```bash
+terraform --validate
+```
 c)Check for resource creation
-sh ''terraform plan ''
+```bash
+terraform plan 
+```
 
 D)Create:
-sh ''terraform apply ''
-
+```bash
+terraform apply
+```
 This will provision EKS cluster, IAM roles, and VPC.
 
-##Step 2 :GitHub Webhook Setup to Trigger Jenkins Pipeline
+## Step 2 :GitHub Webhook Setup to Trigger Jenkins Pipeline
 
 A)Configure Jenkins Job:
 1.Go to the Jenkins pipeline job.
@@ -38,7 +44,7 @@ Set: Payload URL:http://jenkins-url>/github-webhook/
 5.Content type: application/json and Click Add webhook
 
 
-**##Step 3: Build and Test Backend, Containerize, Push to ECR**
+## Step 3: Build and Test Backend, Containerize, Push to ECR
 
 
 Jenkins pipeline ensures:
@@ -76,7 +82,7 @@ Now apply your HPA:
 kubectl apply -f k8s/hpa.yaml
 ```bash
 
-## 4. Monitoring and Logging Setup
+## Steps 4: Monitoring and Logging Setup
 
 To monitor the application and cluster:
 
