@@ -181,3 +181,11 @@ kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.26.1/
 
 - Block all incoming traffic to `backend` pods by default.
 - Only allow traffic from pods with label `app: frontend`.
+
+## 6: Canary Deployment 
+Kubernetes with service selectors and label-based routing
+
+Files:
+k8s/deployments/backend-canary.yaml
+Use Service to route request to canary deployment.
+Explained in canary-deployment.md
